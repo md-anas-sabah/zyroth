@@ -2,18 +2,18 @@ export default function Home() {
   return (
     <div className="bg-background text-on-surface selection:bg-primary/30 overflow-x-hidden min-h-screen">
       {/* TopNavBar */}
-      <nav className="fixed top-0 w-full border-b border-[#484849]/15 bg-[#0e0e0f]/60 backdrop-blur-xl z-50">
+      <nav className="fixed top-0 w-full border-b border-outline-variant/15 bg-[#0e0e0f]/60 backdrop-blur-xl z-50">
         <div className="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
           <div className="text-2xl font-bold text-white tracking-tighter font-headline">Zyroth</div>
           <div className="hidden md:flex items-center gap-8">
             <a className="text-white border-b-2 border-[#c11f68] pb-1 font-body text-sm" href="#">Infrastructure</a>
-            <a className="text-[#adaaab] hover:text-white transition-colors font-body text-sm" href="#">Runtime</a>
-            <a className="text-[#adaaab] hover:text-white transition-colors font-body text-sm" href="#">Docs</a>
-            <a className="text-[#adaaab] hover:text-white transition-colors font-body text-sm" href="#">Pricing</a>
+            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Runtime</a>
+            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Docs</a>
+            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Pricing</a>
           </div>
           <div className="flex items-center gap-4">
-            <button className="text-[#adaaab] hover:text-white transition-colors text-sm font-medium">Sign In</button>
-            <button className="bg-gradient-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Deploy Now</button>
+            <button className="text-on-surface-variant hover:text-white transition-colors text-sm font-medium">Sign In</button>
+            <button className="bg-linear-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Deploy Now</button>
           </div>
         </div>
       </nav>
@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9] mb-8">
               Run AI Agents <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c11f68] to-secondary">Smarter, Faster, Cheaper.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#c11f68] to-secondary">Smarter, Faster, Cheaper.</span>
             </h1>
             <p className="text-on-surface-variant text-xl max-w-xl leading-relaxed mb-10 font-body">
               The Kubernetes for AI Agents. Make multi-agent AI systems as easy to deploy, manage, and scale as microservices.
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 relative">
-            <div className="absolute -inset-2 bg-gradient-to-br from-[#c11f68]/20 to-transparent blur-3xl rounded-full"></div>
+            <div className="absolute -inset-2 bg-linear-to-br from-[#c11f68]/20 to-transparent blur-3xl rounded-full"></div>
             <div className="relative glass-panel rounded-sm border border-outline-variant/20 overflow-hidden shadow-2xl">
               <div className="bg-surface-container-highest px-4 py-2 flex items-center gap-2 border-b border-outline-variant/20">
                 <div className="flex gap-1.5">
@@ -237,12 +237,12 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="h-10 bg-surface-container-highest relative">
                   <div className="absolute inset-y-0 left-0 bg-outline-variant/30 w-full"></div>
-                  <div className="absolute inset-y-0 left-0 bg-on-surface-variant w-[100%] transition-all"></div>
+                  <div className="absolute inset-y-0 left-0 bg-on-surface-variant w-full transition-all"></div>
                   <div className="absolute right-4 inset-y-0 flex items-center text-[10px] font-bold uppercase">Agent Sprawl</div>
                 </div>
                 <div className="h-10 bg-surface-container-highest relative">
                   <div className="absolute inset-y-0 left-0 bg-[#c11f68]/30 w-full"></div>
-                  <div className="absolute inset-y-0 left-0 bg-[#c11f68] w-[100%] transition-all"></div>
+                  <div className="absolute inset-y-0 left-0 bg-[#c11f68] w-full transition-all"></div>
                   <div className="absolute right-4 inset-y-0 flex items-center text-[10px] font-bold uppercase">Unified Platform</div>
                 </div>
               </div>
@@ -286,29 +286,29 @@ export default function Home() {
                 <div className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Step 01</div>
                 <div className="font-headline font-bold">Input Analysis</div>
               </div>
-              <div className="h-16 w-px bg-gradient-to-b from-outline-variant/50 to-transparent"></div>
+              <div className="h-16 w-px bg-linear-to-b from-outline-variant/50 to-transparent"></div>
             </div>
             {/* Step 2 */}
             <div className="w-full flex flex-col items-center">
-              <div className="h-16 w-px bg-gradient-to-b from-transparent to-outline-variant/50"></div>
+              <div className="h-16 w-px bg-linear-to-b from-transparent to-outline-variant/50"></div>
               <div className="glass-panel border border-outline-variant/30 px-12 py-6 text-center w-64 group hover:border-[#c11f68]/50 transition-all">
                 <div className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Step 02</div>
                 <div className="font-headline font-bold">Policy Check</div>
               </div>
-              <div className="h-16 w-px bg-gradient-to-b from-outline-variant/50 to-transparent"></div>
+              <div className="h-16 w-px bg-linear-to-b from-outline-variant/50 to-transparent"></div>
             </div>
             {/* Step 3 */}
             <div className="w-full flex flex-col items-center">
-              <div className="h-16 w-px bg-gradient-to-b from-transparent to-[#c11f68]"></div>
+              <div className="h-16 w-px bg-linear-to-b from-transparent to-[#c11f68]"></div>
               <div className="magenta-bg px-12 py-6 text-center w-64 shadow-[0_0_30px_rgba(193,31,104,0.3)]">
                 <div className="text-[10px] text-white/70 font-bold uppercase tracking-widest mb-1">Step 03</div>
                 <div className="font-headline font-bold text-white">Dynamic Routing</div>
               </div>
-              <div className="h-16 w-px bg-gradient-to-b from-[#c11f68] to-transparent"></div>
+              <div className="h-16 w-px bg-linear-to-b from-[#c11f68] to-transparent"></div>
             </div>
             {/* Step 4 */}
             <div className="w-full flex flex-col items-center">
-              <div className="h-16 w-px bg-gradient-to-b from-transparent to-outline-variant/50"></div>
+              <div className="h-16 w-px bg-linear-to-b from-transparent to-outline-variant/50"></div>
               <div className="glass-panel border border-outline-variant/30 px-12 py-6 text-center w-64 group hover:border-[#c11f68]/50 transition-all">
                 <div className="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest mb-1">Step 04</div>
                 <div className="font-headline font-bold">Final Output</div>
@@ -373,40 +373,40 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-[#484849]/15 pt-20 pb-10 bg-[#000000]">
+      <footer className="w-full border-t border-outline-variant/15 pt-20 pb-10 bg-[#000000]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 w-full max-w-screen-2xl mx-auto">
           <div className="col-span-2 md:col-span-1">
             <div className="text-lg font-black text-white mb-6">Zyroth</div>
-            <p className="text-[#adaaab] font-body text-xs leading-relaxed max-w-[200px]">
+            <p className="text-on-surface-variant font-body text-xs leading-relaxed max-w-[200px]">
               Programmable infrastructure for the next generation of sovereign intelligence.
             </p>
           </div>
           <div>
             <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Product</div>
             <div className="flex flex-col gap-4">
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Changelog</a>
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Status</a>
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Docs</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Changelog</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Status</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Docs</a>
             </div>
           </div>
           <div>
             <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Resources</div>
             <div className="flex flex-col gap-4">
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">API Reference</a>
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Security</a>
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Case Studies</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">API Reference</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Security</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Case Studies</a>
             </div>
           </div>
           <div>
             <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Legal</div>
             <div className="flex flex-col gap-4">
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Terms</a>
-              <a className="text-[#adaaab] hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Privacy</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Terms</a>
+              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Privacy</a>
             </div>
           </div>
         </div>
         <div className="mt-20 px-8 w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-[#adaaab] font-body text-xs uppercase tracking-widest">© 2024 Zyroth Intelligence. Built for the Sovereign Developer.</div>
+          <div className="text-on-surface-variant font-body text-xs uppercase tracking-widest">© 2024 Zyroth Intelligence. Built for the Sovereign Developer.</div>
           <div className="flex gap-6">
             <span className="text-[#c11f68] material-symbols-outlined cursor-pointer hover:opacity-70">language</span>
             <span className="text-[#c11f68] material-symbols-outlined cursor-pointer hover:opacity-70">terminal</span>
