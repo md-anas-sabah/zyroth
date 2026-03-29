@@ -47,27 +47,31 @@ export default function Dashboard() {
             </div>
           </div>
           <nav className="space-y-1">
-            <a className="flex items-center gap-3 px-4 py-3 text-[#c11f68] bg-[#c11f68]/10 border-r-2 border-[#c11f68] transition-all duration-200" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 text-[#c11f68] bg-[#c11f68]/10 border-r-2 border-[#c11f68] transition-all duration-200" href="/dashboard">
               <LayoutDashboard className="w-4 h-4 fill-[#c11f68]" />
-              <span className="font-medium text-sm tracking-wide">Dashboard</span>
+              <span className="font-medium text-sm tracking-wide">Overview</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/agents">
               <Bot className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Agents</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <Rocket className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Deployments</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/workflows">
               <Network className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Infrastructure</span>
+              <span className="font-medium text-sm tracking-wide">Workflows</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/executions">
               <Terminal className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Logs</span>
+              <span className="font-medium text-sm tracking-wide">Executions</span>
             </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/analytics">
+              <Activity className="w-4 h-4" />
+              <span className="font-medium text-sm tracking-wide">Analytics</span>
+            </a>
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/governance">
+              <Database className="w-4 h-4" />
+              <span className="font-medium text-sm tracking-wide">Governance</span>
+            </a>
+            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/settings">
               <Settings className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Settings</span>
             </a>
