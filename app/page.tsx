@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Globe, Terminal, Shield, CheckCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -6,7 +7,10 @@ export default function Home() {
       {/* TopNavBar */}
       <nav className="fixed top-0 w-full border-b border-outline-variant/15 bg-[#0e0e0f]/60 backdrop-blur-xl z-50">
         <div className="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
-          <Link href="/" className="text-2xl font-bold text-white tracking-tighter font-headline">AgentHub</Link>
+          <Link href="/" className="flex items-center gap-2 group">
+            <img src="/logo.png" alt="Zyroth Logo" className="w-8 h-8" />
+            <span className="text-2xl font-bold text-white tracking-tighter font-headline">Zyroth</span>
+          </Link>
           <div className="hidden md:flex items-center gap-8">
             <a className="text-white border-b-2 border-[#c11f68] pb-1 font-body text-sm" href="#">Infrastructure</a>
             <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Runtime</a>
@@ -260,15 +264,15 @@ export default function Home() {
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#c11f68]">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#c11f68]" />
                 <span className="text-sm font-medium">Framework Agnostic Execution</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#c11f68]">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#c11f68]" />
                 <span className="text-sm font-medium">Built-in Distributed Tracing</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#c11f68]">check_circle</span>
+                <CheckCircle className="w-5 h-5 text-[#c11f68]" />
                 <span className="text-sm font-medium">Automated PII Compliance (GDPR/HIPAA)</span>
               </li>
             </ul>
@@ -378,7 +382,10 @@ export default function Home() {
       <footer className="w-full border-t border-outline-variant/15 pt-20 pb-10 bg-[#000000]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 w-full max-w-screen-2xl mx-auto">
           <div className="col-span-2 md:col-span-1">
-            <div className="text-lg font-black text-white mb-6">AgentHub</div>
+            <div className="flex items-center gap-2 mb-6">
+              <img src="/logo.png" alt="Zyroth Logo" className="w-6 h-6 grayscale opacity-80" />
+              <div className="text-lg font-black text-white">Zyroth</div>
+            </div>
             <p className="text-on-surface-variant font-body text-xs leading-relaxed max-w-[200px]">
               Programmable infrastructure for the next generation of sovereign intelligence.
             </p>
@@ -410,9 +417,9 @@ export default function Home() {
         <div className="mt-20 px-8 w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-on-surface-variant font-body text-xs uppercase tracking-widest">© 2024 Zyroth Intelligence. Built for the Sovereign Developer.</div>
           <div className="flex gap-6">
-            <span className="text-[#c11f68] material-symbols-outlined cursor-pointer hover:opacity-70">language</span>
-            <span className="text-[#c11f68] material-symbols-outlined cursor-pointer hover:opacity-70">terminal</span>
-            <span className="text-[#c11f68] material-symbols-outlined cursor-pointer hover:opacity-70">shield</span>
+            <Globe className="w-5 h-5 text-[#c11f68] cursor-pointer hover:opacity-70" />
+            <Terminal className="w-5 h-5 text-[#c11f68] cursor-pointer hover:opacity-70" />
+            <Shield className="w-5 h-5 text-[#c11f68] cursor-pointer hover:opacity-70" />
           </div>
         </div>
       </footer>

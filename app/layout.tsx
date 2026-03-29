@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Zyroth" }],
   creator: "Zyroth",
   publisher: "Zyroth",
+  icons: {
+    icon: "/logo.png",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -74,9 +77,7 @@ export default function RootLayout({
       lang="en"
       className={`dark ${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-      </head>
+      <head />
       <body className="font-body min-h-full flex flex-col">{children}</body>
     </html>
   );

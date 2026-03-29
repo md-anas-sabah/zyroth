@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import { User, Mail, Lock, Eye, ArrowRight } from 'lucide-react';
 
 export default function SignupPage() {
   return (
@@ -18,8 +18,9 @@ export default function SignupPage() {
       {/* Top Navigation */}
       <header className="fixed top-0 z-50 w-full bg-[#0e0e0f]/80 backdrop-blur-md border-b border-[#584047]/15">
         <div className="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-['Space_Grotesk'] uppercase leading-none">AgentHub</span>
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Zyroth Logo" className="w-8 h-8" />
+            <span className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-headline uppercase leading-none">Zyroth</span>
             <span className="text-[10px] font-medium tracking-[0.15em] uppercase text-[#c11f68] bg-[#c11f68]/10 px-1.5 py-0.5 rounded-sm">Auth</span>
           </Link>
           <div className="hidden md:flex items-center gap-8">
@@ -41,7 +42,7 @@ export default function SignupPage() {
           {/* Glassmorphic Form Card */}
           <div className="glass-card p-8 md:p-10 border border-[#584047]/20 shadow-2xl">
             <div className="mb-10 text-center md:text-left">
-              <h1 className="font-['Space_Grotesk'] text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-2">Initialize Instance</h1>
+              <h1 className="font-headline text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-2">Initialize Instance</h1>
               <p className="text-[#dfbec6] text-sm tracking-wide">Enter the collective to deploy your first agent.</p>
             </div>
 
@@ -49,7 +50,7 @@ export default function SignupPage() {
               {/* Name Input */}
               <div className="space-y-2">
                 <label className="text-[10px] font-medium tracking-widest uppercase text-[#dfbec6] flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xs">person</span>
+                  <User className="w-3.5 h-3.5" />
                   Full Identity
                 </label>
                 <input
@@ -62,12 +63,12 @@ export default function SignupPage() {
               {/* Email Input */}
               <div className="space-y-2">
                 <label className="text-[10px] font-medium tracking-widest uppercase text-[#dfbec6] flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xs">alternate_email</span>
+                  <Mail className="w-3.5 h-3.5" />
                   Neural Link (Email)
                 </label>
                 <input
                   className="w-full bg-[#1c1b1c] border-0 border-b border-[#584047]/30 px-4 py-3 text-on-surface placeholder:text-[#dfbec6]/30 focus:ring-0 focus:border-[#ffb1c7] text-sm transition-all text-glow outline-none"
-                  placeholder="operator@agenthub.io"
+                  placeholder="operator@zyroth.com"
                   type="email"
                 />
               </div>
@@ -75,7 +76,7 @@ export default function SignupPage() {
               {/* Password Input */}
               <div className="space-y-2">
                 <label className="text-[10px] font-medium tracking-widest uppercase text-[#dfbec6] flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xs">key</span>
+                  <Lock className="w-3.5 h-3.5" />
                   Access Protocol
                 </label>
                 <div className="relative">
@@ -85,7 +86,7 @@ export default function SignupPage() {
                     type="password"
                   />
                   <button className="absolute right-3 top-1/2 -translate-y-1/2 text-[#dfbec6]/40 hover:text-[#ffb1c7] transition-colors" type="button">
-                    <span className="material-symbols-outlined text-[18px]">visibility</span>
+                    <Eye className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -108,7 +109,7 @@ export default function SignupPage() {
                 type="submit"
               >
                 Create Account
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </form>
 
@@ -116,12 +117,18 @@ export default function SignupPage() {
             <div className="mt-10 pt-8 border-t border-[#584047]/10">
               <p className="text-[10px] text-center text-[#dfbec6]/40 uppercase tracking-[0.2em] mb-6">Authorize via External Grid</p>
               <div className="grid grid-cols-2 gap-4">
-                <button className="flex items-center justify-center gap-3 bg-[#1c1b1c] hover:bg-[#2a2a2b] py-3 border border-[#584047]/10 transition-colors">
-                  <span className="material-symbols-outlined text-[18px] opacity-70">google</span>
+                <button className="flex items-center justify-center gap-3 bg-[#1c1b1c] hover:bg-[#2a2a2b] py-3 border border-[#584047]/10 transition-colors group" type="button">
+                  <svg className="w-4 h-4 text-[#e5e2e3]/60 group-hover:text-[#e5e2e3] transition-colors" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 12h4" />
+                    <path d="M16 12a4 4 0 1 1-4-4" />
+                  </svg>
                   <span className="text-[10px] font-medium uppercase tracking-widest text-[#e5e2e3]/80">Google</span>
                 </button>
-                <button className="flex items-center justify-center gap-3 bg-[#1c1b1c] hover:bg-[#2a2a2b] py-3 border border-[#584047]/10 transition-colors">
-                  <span className="material-symbols-outlined text-[18px] opacity-70">terminal</span>
+                <button className="flex items-center justify-center gap-3 bg-[#1c1b1c] hover:bg-[#2a2a2b] py-3 border border-[#584047]/10 transition-colors group" type="button">
+                  <svg className="w-4 h-4 text-[#e5e2e3]/60 group-hover:text-[#e5e2e3] transition-colors" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
                   <span className="text-[10px] font-medium uppercase tracking-widest text-[#e5e2e3]/80">GitHub</span>
                 </button>
               </div>
@@ -147,13 +154,13 @@ export default function SignupPage() {
 
       {/* Footer */}
       <footer className="flex justify-between items-center px-12 py-8 w-full z-10 mt-auto">
-        <div className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#e5e2e3]/30">
-          © 2024 AgentHub. Kinetic Monolith Architecture.
+        <div className="font-body text-[10px] uppercase tracking-widest text-[#e5e2e3]/30">
+          © 2024 Zyroth. Kinetic Monolith Architecture.
         </div>
         <div className="flex gap-6">
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Privacy</a>
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Security</a>
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Status</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Privacy</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Security</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#e5e2e3]/30 hover:text-[#c11f68] transition-opacity" href="#">Status</a>
         </div>
       </footer>
 

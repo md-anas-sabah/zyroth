@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import { Mail, Lock, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function LoginPage() {
   return (
@@ -24,13 +24,13 @@ export default function LoginPage() {
 
       {/* Top Navigation */}
       <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6">
-        <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-          <div className="w-2 h-8 bg-[#c11f68]"></div>
-          <span className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-['Space_Grotesk'] uppercase">AgentHub</span>
+        <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+          <img src="/logo.png" alt="Zyroth Logo" className="w-8 h-8" />
+          <span className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-headline uppercase">Zyroth</span>
         </Link>
         <div className="flex items-center gap-6">
-          <span className="text-[10px] font-medium tracking-[0.2em] text-[#e5e2e3]/30 uppercase font-['Inter']">System Status: Operational</span>
-          <div className="w-2 h-2 rounded-full bg-[#79dc7c] shadow-[0_0_8px_rgba(121,220,124,0.4)]"></div>
+          <span className="text-[10px] font-medium tracking-[0.2em] text-[#e5e2e3]/30 uppercase font-body">System Status: Operational</span>
+          <ShieldCheck className="w-4 h-4 text-[#79dc7c]" />
         </div>
       </header>
 
@@ -45,11 +45,11 @@ export default function LoginPage() {
         <div className="w-full max-w-[440px] relative">
           {/* Headline Section */}
           <div className="mb-10 space-y-2">
-            <h1 className="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] tracking-tighter text-[#e5e2e3] leading-none">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline tracking-tighter text-[#e5e2e3] leading-none">
               Initialize <br />
               <span className="text-[#ffb1c7]">Console.</span>
             </h1>
-            <p className="text-[11px] font-medium tracking-widest text-[#e5e2e3]/40 uppercase font-['Inter']">
+            <p className="text-[11px] font-medium tracking-widest text-[#e5e2e3]/40 uppercase font-body">
               Authentication Required // Infrastructure-Chic v1.0
             </p>
           </div>
@@ -59,17 +59,17 @@ export default function LoginPage() {
             <form className="space-y-6">
               {/* Email Field */}
               <div className="space-y-1.5 magenta-glow transition-all">
-                <label className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/50 uppercase font-['Inter']" htmlFor="email">Identity</label>
+                <label className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/50 uppercase font-body" htmlFor="email">Identity</label>
                 <div className="relative">
                   <input
-                    className="w-full bg-transparent border-b border-[#584047]/30 focus:border-[#ffb1c7] border-t-0 border-l-0 border-r-0 text-[#e5e2e3] placeholder:text-[#e5e2e3]/20 py-4 px-0 focus:ring-0 transition-colors font-['Inter'] text-sm tracking-wide outline-none"
+                    className="w-full bg-transparent border-b border-[#584047]/30 focus:border-[#ffb1c7] border-t-0 border-l-0 border-r-0 text-[#e5e2e3] placeholder:text-[#e5e2e3]/20 py-4 px-0 focus:ring-0 transition-colors font-body text-sm tracking-wide outline-none"
                     id="email"
                     name="email"
                     placeholder="agent@hub.internal"
                     type="email"
                   />
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20">
-                    <span className="material-symbols-outlined text-sm">alternate_email</span>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 group-focus-within:opacity-100 transition-opacity">
+                    <Mail className="w-4 h-4 text-[#e5e2e3]" />
                   </div>
                 </div>
               </div>
@@ -77,19 +77,19 @@ export default function LoginPage() {
               {/* Password Field */}
               <div className="space-y-1.5 magenta-glow transition-all">
                 <div className="flex justify-between items-end">
-                  <label className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/50 uppercase font-['Inter']" htmlFor="password">Security Key</label>
-                  <a className="text-[10px] font-medium tracking-wide text-[#ffb1c7]/60 hover:text-[#ffb1c7] transition-colors font-['Inter']" href="#">Recover Access?</a>
+                  <label className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/50 uppercase font-body" htmlFor="password">Security Key</label>
+                  <a className="text-[10px] font-medium tracking-wide text-[#ffb1c7]/60 hover:text-[#ffb1c7] transition-colors font-body" href="#">Recover Access?</a>
                 </div>
                 <div className="relative">
                   <input
-                    className="w-full bg-transparent border-b border-[#584047]/30 focus:border-[#ffb1c7] border-t-0 border-l-0 border-r-0 text-[#e5e2e3] placeholder:text-[#e5e2e3]/20 py-4 px-0 focus:ring-0 transition-colors font-['Inter'] text-sm tracking-wide outline-none"
+                    className="w-full bg-transparent border-b border-[#584047]/30 focus:border-[#ffb1c7] border-t-0 border-l-0 border-r-0 text-[#e5e2e3] placeholder:text-[#e5e2e3]/20 py-4 px-0 focus:ring-0 transition-colors font-body text-sm tracking-wide outline-none"
                     id="password"
                     name="password"
                     placeholder="••••••••"
                     type="password"
                   />
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20">
-                    <span className="material-symbols-outlined text-sm">lock</span>
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 group-focus-within:opacity-100 transition-opacity">
+                    <Lock className="w-4 h-4 text-[#e5e2e3]" />
                   </div>
                 </div>
               </div>
@@ -97,26 +97,32 @@ export default function LoginPage() {
               {/* Actions */}
               <div className="pt-4 space-y-6">
                 <button
-                  className="w-full bg-linear-to-r from-[#c11f68] to-[#8e0048] text-white font-['Space_Grotesk'] font-bold text-sm tracking-[0.15em] uppercase py-4 shadow-lg hover:brightness-110 active:scale-[0.98] transition-all group flex items-center justify-center gap-2"
+                  className="w-full bg-linear-to-r from-[#c11f68] to-[#8e0048] text-white font-headline font-bold text-sm tracking-[0.15em] uppercase py-4 shadow-lg hover:brightness-110 active:scale-[0.98] transition-all group flex items-center justify-center gap-2"
                   type="submit"
                 >
                   <span>Sign In</span>
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
 
                 <div className="relative flex items-center gap-4 py-2">
                   <div className="grow h-px bg-[#584047]/10"></div>
-                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#e5e2e3]/20 uppercase font-['Inter']">External Providers</span>
+                  <span className="text-[9px] font-bold tracking-[0.2em] text-[#e5e2e3]/20 uppercase font-body">External Providers</span>
                   <div className="grow h-px bg-[#584047]/10"></div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <button className="bg-[#1c1b1c] hover:bg-[#2a2a2b] border border-[#584047]/10 py-3 flex items-center justify-center gap-2 transition-all" type="button">
-                    <span className="material-symbols-outlined text-base">terminal</span>
-                    <span className="text-[10px] font-bold tracking-widest uppercase">Github</span>
+                  <button className="bg-[#1c1b1c] hover:bg-[#2a2a2b] border border-[#584047]/10 py-3 flex items-center justify-center gap-3 transition-all group" type="button">
+                    <svg className="w-4 h-4 text-[#e5e2e3]/60 group-hover:text-[#e5e2e3] transition-colors" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span className="text-[10px] font-bold tracking-widest uppercase">GitHub</span>
                   </button>
-                  <button className="bg-[#1c1b1c] hover:bg-[#2a2a2b] border border-[#584047]/10 py-3 flex items-center justify-center gap-2 transition-all" type="button">
-                    <span className="material-symbols-outlined text-base">google</span>
+                  <button className="bg-[#1c1b1c] hover:bg-[#2a2a2b] border border-[#584047]/10 py-3 flex items-center justify-center gap-3 transition-all group" type="button">
+                    <svg className="w-4 h-4 text-[#e5e2e3]/60 group-hover:text-[#e5e2e3] transition-colors" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 12h4" />
+                      <path d="M16 12a4 4 0 1 1-4-4" />
+                    </svg>
                     <span className="text-[10px] font-bold tracking-widest uppercase">Google</span>
                   </button>
                 </div>
@@ -126,7 +132,7 @@ export default function LoginPage() {
 
           {/* Footer Toggle */}
           <div className="mt-8 text-center">
-            <p className="text-xs text-[#e5e2e3]/40 font-['Inter'] tracking-wide">
+            <p className="text-xs text-[#e5e2e3]/40 font-body tracking-wide">
               Don&apos;t have an account? 
               <Link href="/auth/signup" className="text-[#ffb1c7] font-bold hover:underline underline-offset-4 ml-1">Sign Up</Link>
             </p>
@@ -137,12 +143,12 @@ export default function LoginPage() {
       {/* Branding Footer */}
       <footer className="p-8 flex justify-between items-end z-10 w-full mt-auto">
         <div className="space-y-1">
-          <p className="text-[9px] font-bold tracking-widest text-[#e5e2e3]/20 uppercase font-['Inter']">Protocol 80.4.11</p>
-          <p className="text-[9px] font-medium tracking-widest text-[#e5e2e3]/10 uppercase font-['Inter']">© 2024 AgentHub. Kinetic Monolith Architecture.</p>
+          <p className="text-[9px] font-bold tracking-widest text-[#e5e2e3]/20 uppercase font-body">Protocol 80.4.11</p>
+          <p className="text-[9px] font-medium tracking-widest text-[#e5e2e3]/10 uppercase font-body">© 2024 Zyroth. Kinetic Monolith Architecture.</p>
         </div>
         <div className="flex gap-4">
-          <a className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/30 hover:text-[#ffb1c7] transition-colors uppercase font-['Inter']" href="#">Terms</a>
-          <a className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/30 hover:text-[#ffb1c7] transition-colors uppercase font-['Inter']" href="#">Privacy</a>
+          <a className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/30 hover:text-[#ffb1c7] transition-colors uppercase font-body" href="#">Terms</a>
+          <a className="text-[10px] font-bold tracking-widest text-[#e5e2e3]/30 hover:text-[#ffb1c7] transition-colors uppercase font-body" href="#">Privacy</a>
         </div>
       </footer>
     </div>

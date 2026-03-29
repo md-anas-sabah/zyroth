@@ -1,4 +1,25 @@
 import React from 'react';
+import { 
+  Zap, 
+  LayoutDashboard, 
+  Bot, 
+  Rocket, 
+  Network, 
+  Terminal, 
+  Settings, 
+  Search, 
+  Bell, 
+  HelpCircle, 
+  Database, 
+  DollarSign, 
+  Cpu, 
+  CheckCircle,
+  Filter,
+  MoreVertical,
+  Activity,
+  AlertCircle,
+  Clock
+} from 'lucide-react';
 
 export default function Dashboard() {
   return (
@@ -19,43 +40,41 @@ export default function Dashboard() {
       <aside className="flex flex-col h-screen fixed left-0 top-0 z-40 w-64 border-r border-[#584047]/15 bg-[#1c1b1c]">
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-8 h-8 bg-linear-to-br from-[#ffb1c7] to-[#c11f68] rounded-sm flex items-center justify-center">
-              <span className="material-symbols-outlined text-[#650031]" style={{ fontVariationSettings: "'FILL' 1" }}>hub</span>
-            </div>
+            <img src="/logo.png" alt="Zyroth Logo" className="w-8 h-8 rounded-sm" />
             <div>
-              <h1 className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-['Space_Grotesk']">AgentHub</h1>
-              <p className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#9a9798]">AI Orchestration</p>
+              <h1 className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-headline">Zyroth</h1>
+              <p className="font-body text-[10px] uppercase tracking-widest text-[#9a9798]">AI Orchestration</p>
             </div>
           </div>
           <nav className="space-y-1">
             <a className="flex items-center gap-3 px-4 py-3 text-[#c11f68] bg-[#c11f68]/10 border-r-2 border-[#c11f68] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>dashboard</span>
+              <LayoutDashboard className="w-4 h-4 fill-[#c11f68]" />
               <span className="font-medium text-sm tracking-wide">Dashboard</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined">smart_toy</span>
+              <Bot className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Agents</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined">rocket_launch</span>
+              <Rocket className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Deployments</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined">account_tree</span>
+              <Network className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Infrastructure</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined">terminal</span>
+              <Terminal className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Logs</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="#">
-              <span className="material-symbols-outlined">settings</span>
+              <Settings className="w-4 h-4" />
               <span className="font-medium text-sm tracking-wide">Settings</span>
             </a>
           </nav>
         </div>
         <div className="mt-auto p-6">
-          <button className="w-full py-3 bg-linear-to-r from-[#c11f68] to-[#8e0048] rounded-sm text-[#ffdce4] font-['Space_Grotesk'] font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
+          <button className="w-full py-3 bg-linear-to-r from-[#c11f68] to-[#8e0048] rounded-sm text-[#ffdce4] font-headline font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
             New Agent
           </button>
         </div>
@@ -65,17 +84,17 @@ export default function Dashboard() {
       <header className="flex justify-between items-center w-full pl-72 pr-8 h-16 fixed top-0 z-30 bg-[#0e0e0f]/80 backdrop-blur-xl border-b border-[#584047]/15">
         <div className="flex items-center w-1/3">
           <div className="relative w-full group">
-            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#a78990] text-sm">search</span>
-            <input className="w-full bg-[#353436]/30 border-none focus:ring-1 focus:ring-[#c11f68] text-xs font-['Inter'] tracking-widest py-2 pl-10 placeholder:text-[#a78990]/50 rounded-sm text-[#e5e2e3] outline-none" placeholder="SEARCH AGENTS, LOGS, OR MODELS..." type="text" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#a78990] w-4 h-4" />
+            <input className="w-full bg-[#353436]/30 border-none focus:ring-1 focus:ring-[#c11f68] text-xs font-body tracking-widest py-2 pl-10 placeholder:text-[#a78990]/50 rounded-sm text-[#e5e2e3] outline-none" placeholder="SEARCH AGENTS, LOGS, OR MODELS..." type="text" />
           </div>
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4 border-r border-[#584047]/30 pr-6">
             <button className="text-[#a78990] hover:text-[#ffb1c7] transition-colors">
-              <span className="material-symbols-outlined">notifications</span>
+              <Bell className="w-4 h-4" />
             </button>
             <button className="text-[#a78990] hover:text-[#ffb1c7] transition-colors">
-              <span className="material-symbols-outlined">help_outline</span>
+              <HelpCircle className="w-4 h-4" />
             </button>
           </div>
           <div className="flex items-center gap-3">
@@ -93,8 +112,8 @@ export default function Dashboard() {
         {/* Header Section */}
         <div className="mb-10 flex justify-between items-end">
           <div>
-            <h2 className="font-['Space_Grotesk'] text-4xl font-bold tracking-tighter text-[#e5e2e3] mb-1">Operational Overview</h2>
-            <p className="font-['Inter'] text-xs tracking-[0.2em] text-[#a78990] uppercase">Cluster: us-east-monolith-01</p>
+            <h2 className="font-headline text-4xl font-bold tracking-tighter text-[#e5e2e3] mb-1">Operational Overview</h2>
+            <p className="font-body text-xs tracking-[0.2em] text-[#a78990] uppercase">Cluster: us-east-monolith-01</p>
           </div>
           <div className="flex gap-2">
             <button className="px-4 py-2 bg-[#1c1b1c] hover:bg-[#2a2a2b] transition-colors text-[10px] font-bold tracking-widest text-[#e5e2e3] uppercase border border-[#584047]/20">Last 24 Hours</button>
@@ -107,11 +126,11 @@ export default function Dashboard() {
           {/* Metric 1 */}
           <div className="glass-card p-6 flex flex-col justify-between h-40">
             <div className="flex justify-between items-start">
-              <p className="font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Total Requests</p>
-              <span className="material-symbols-outlined text-[#ffb1c7] text-lg">database</span>
+              <p className="font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Total Requests</p>
+              <Database className="w-4 h-4 text-[#ffb1c7]" />
             </div>
             <div className="flex items-baseline gap-2">
-              <h3 className="font-['Space_Grotesk'] text-3xl font-bold text-[#e5e2e3]">1.28M</h3>
+              <h3 className="font-headline text-3xl font-bold text-[#e5e2e3]">1.28M</h3>
               <span className="text-[#79dc7c] text-[10px] font-bold">+12.4%</span>
             </div>
             <div className="h-8 w-full mt-2 overflow-hidden">
@@ -123,11 +142,11 @@ export default function Dashboard() {
           {/* Metric 2 */}
           <div className="glass-card p-6 flex flex-col justify-between h-40">
             <div className="flex justify-between items-start">
-              <p className="font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Cost Saved</p>
-              <span className="material-symbols-outlined text-[#ffb1c7] text-lg">payments</span>
+              <p className="font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Cost Saved</p>
+              <DollarSign className="w-4 h-4 text-[#ffb1c7]" />
             </div>
             <div className="flex items-baseline gap-2">
-              <h3 className="font-['Space_Grotesk'] text-3xl font-bold text-[#e5e2e3]">$14,202</h3>
+              <h3 className="font-headline text-3xl font-bold text-[#e5e2e3]">$14,202</h3>
               <span className="text-[#79dc7c] text-[10px] font-bold">+8.1%</span>
             </div>
             <div className="h-8 w-full mt-2 overflow-hidden">
@@ -139,11 +158,11 @@ export default function Dashboard() {
           {/* Metric 3 */}
           <div className="glass-card p-6 flex flex-col justify-between h-40">
             <div className="flex justify-between items-start">
-              <p className="font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Models Used</p>
-              <span className="material-symbols-outlined text-[#ffb1c7] text-lg">memory</span>
+              <p className="font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Models Used</p>
+              <Cpu className="w-4 h-4 text-[#ffb1c7]" />
             </div>
             <div className="flex items-baseline gap-2">
-              <h3 className="font-['Space_Grotesk'] text-3xl font-bold text-[#e5e2e3]">18</h3>
+              <h3 className="font-headline text-3xl font-bold text-[#e5e2e3]">18</h3>
               <span className="text-[#a78990] text-[10px] font-bold">STABLE</span>
             </div>
             <div className="flex gap-1 mt-2">
@@ -156,11 +175,11 @@ export default function Dashboard() {
           {/* Metric 4 */}
           <div className="glass-card p-6 flex flex-col justify-between h-40">
             <div className="flex justify-between items-start">
-              <p className="font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Success Rate</p>
-              <span className="material-symbols-outlined text-[#ffb1c7] text-lg">verified</span>
+              <p className="font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase">Success Rate</p>
+              <CheckCircle className="w-4 h-4 text-[#ffb1c7]" />
             </div>
             <div className="flex items-baseline gap-2">
-              <h3 className="font-['Space_Grotesk'] text-3xl font-bold text-[#e5e2e3]">99.98%</h3>
+              <h3 className="font-headline text-3xl font-bold text-[#e5e2e3]">99.98%</h3>
               <span className="text-[#79dc7c] text-[10px] font-bold">+0.02%</span>
             </div>
             <div className="bg-[#2a2a2b] h-1 w-full rounded-full mt-2">
@@ -174,15 +193,15 @@ export default function Dashboard() {
           {/* Large Request Chart */}
           <div className="lg:col-span-2 glass-card p-8">
             <div className="flex justify-between items-center mb-8">
-              <h4 className="font-['Space_Grotesk'] text-lg font-bold tracking-tight text-[#e5e2e3]">Requests Over Time</h4>
+              <h4 className="font-headline text-lg font-bold tracking-tight text-[#e5e2e3]">Requests Over Time</h4>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#ffb1c7]"></span>
-                  <span className="text-[10px] font-['Inter'] uppercase text-[#a78990] tracking-widest">Optimized</span>
+                  <span className="text-[10px] font-body uppercase text-[#a78990] tracking-widest">Optimized</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#584047]"></span>
-                  <span className="text-[10px] font-['Inter'] uppercase text-[#a78990] tracking-widest">Legacy</span>
+                  <span className="text-[10px] font-body uppercase text-[#a78990] tracking-widest">Legacy</span>
                 </div>
               </div>
             </div>
@@ -210,20 +229,20 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="flex justify-between mt-4">
-              <span className="text-[9px] font-['Inter'] text-[#a78990] tracking-[0.2em] uppercase">00:00</span>
-              <span className="text-[9px] font-['Inter'] text-[#a78990] tracking-[0.2em] uppercase">06:00</span>
-              <span className="text-[9px] font-['Inter'] text-[#a78990] tracking-[0.2em] uppercase">12:00</span>
-              <span className="text-[9px] font-['Inter'] text-[#a78990] tracking-[0.2em] uppercase">18:00</span>
-              <span className="text-[9px] font-['Inter'] text-[#ffb1c7] font-bold tracking-[0.2em] uppercase">NOW</span>
+              <span className="text-[9px] font-body text-[#a78990] tracking-[0.2em] uppercase">00:00</span>
+              <span className="text-[9px] font-body text-[#a78990] tracking-[0.2em] uppercase">06:00</span>
+              <span className="text-[9px] font-body text-[#a78990] tracking-[0.2em] uppercase">12:00</span>
+              <span className="text-[9px] font-body text-[#a78990] tracking-[0.2em] uppercase">18:00</span>
+              <span className="text-[9px] font-body text-[#ffb1c7] font-bold tracking-[0.2em] uppercase">NOW</span>
             </div>
           </div>
 
           {/* Model Distribution */}
           <div className="glass-card p-8">
-            <h4 className="font-['Space_Grotesk'] text-lg font-bold tracking-tight text-[#e5e2e3] mb-8">Model Distribution</h4>
+            <h4 className="font-headline text-lg font-bold tracking-tight text-[#e5e2e3] mb-8">Model Distribution</h4>
             <div className="space-y-6">
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-[10px] font-['Inter'] tracking-widest uppercase">
+                <div className="flex justify-between items-center text-[10px] font-body tracking-widest uppercase">
                   <span className="text-[#e5e2e3]">GPT-4o</span>
                   <span className="text-[#a78990]">45%</span>
                 </div>
@@ -232,7 +251,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-[10px] font-['Inter'] tracking-widest uppercase">
+                <div className="flex justify-between items-center text-[10px] font-body tracking-widest uppercase">
                   <span className="text-[#e5e2e3]">Claude 3.5 Sonnet</span>
                   <span className="text-[#a78990]">32%</span>
                 </div>
@@ -241,7 +260,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-[10px] font-['Inter'] tracking-widest uppercase">
+                <div className="flex justify-between items-center text-[10px] font-body tracking-widest uppercase">
                   <span className="text-[#e5e2e3]">Gemini 1.5 Pro</span>
                   <span className="text-[#a78990]">15%</span>
                 </div>
@@ -250,7 +269,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="flex justify-between items-center text-[10px] font-['Inter'] tracking-widest uppercase">
+                <div className="flex justify-between items-center text-[10px] font-body tracking-widest uppercase">
                   <span className="text-[#e5e2e3]">Llama 3 70B</span>
                   <span className="text-[#a78990]">8%</span>
                 </div>
@@ -262,9 +281,9 @@ export default function Dashboard() {
             <div className="mt-8 pt-6 border-t border-[#584047]/10">
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-[#c11f68]/10 rounded-sm">
-                  <span className="material-symbols-outlined text-[#ffb1c7] text-sm">bolt</span>
+                  <Zap className="w-3.5 h-3.5 text-[#ffb1c7]" />
                 </div>
-                <p className="text-[9px] font-['Inter'] text-[#a78990] tracking-wider leading-relaxed">System is currently routing 12% more traffic to <span className="text-[#e5e2e3] font-bold">GPT-4o</span> based on latency optimization rules.</p>
+                <p className="text-[9px] font-body text-[#a78990] tracking-wider leading-relaxed">System is currently routing 12% more traffic to <span className="text-[#e5e2e3] font-bold">GPT-4o</span> based on latency optimization rules.</p>
               </div>
             </div>
           </div>
@@ -273,14 +292,14 @@ export default function Dashboard() {
         {/* System Logs */}
         <div className="glass-card overflow-hidden">
           <div className="px-8 py-6 border-b border-[#584047]/10 flex justify-between items-center">
-            <h4 className="font-['Space_Grotesk'] text-lg font-bold tracking-tight text-[#e5e2e3]">System Logs</h4>
+            <h4 className="font-headline text-lg font-bold tracking-tight text-[#e5e2e3]">System Logs</h4>
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#79dc7c]"></div>
-                <span className="text-[10px] font-['Inter'] text-[#a78990] uppercase tracking-widest">Streaming</span>
+                <span className="text-[10px] font-body text-[#a78990] uppercase tracking-widest">Streaming</span>
               </div>
               <button className="text-[#a78990] hover:text-[#e5e2e3] transition-colors">
-                <span className="material-symbols-outlined text-sm">filter_list</span>
+                <Filter className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -288,10 +307,10 @@ export default function Dashboard() {
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-[#201f20]/50 border-b border-[#584047]/10">
-                  <th className="px-8 py-4 font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Agent Run ID</th>
-                  <th className="px-8 py-4 font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Model</th>
-                  <th className="px-8 py-4 font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Status</th>
-                  <th className="px-8 py-4 font-['Inter'] text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium text-right">Latency</th>
+                  <th className="px-8 py-4 font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Agent Run ID</th>
+                  <th className="px-8 py-4 font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Model</th>
+                  <th className="px-8 py-4 font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium">Status</th>
+                  <th className="px-8 py-4 font-body text-[10px] tracking-[0.2em] text-[#a78990] uppercase font-medium text-right">Latency</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#584047]/5">
@@ -359,11 +378,11 @@ export default function Dashboard() {
       {/* Footer */}
       <footer className="flex justify-between items-center pl-72 pr-8 w-full mt-auto py-4 border-t border-[#584047]/15 bg-[#0e0e0f]">
         <div className="flex gap-6">
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">System Status</a>
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">API Docs</a>
-          <a className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">Support</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">System Status</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">API Docs</a>
+          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">Support</a>
         </div>
-        <p className="font-['Inter'] text-[10px] uppercase tracking-widest text-[#9a9798]">v2.4.0-stable | infrastructure-chic</p>
+        <p className="font-body text-[10px] uppercase tracking-widest text-[#9a9798]">v2.4.0-stable | infrastructure-chic</p>
       </footer>
     </div>
   );
