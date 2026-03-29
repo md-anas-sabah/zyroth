@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="bg-background text-on-surface selection:bg-primary/30 overflow-x-hidden min-h-screen">
       {/* TopNavBar */}
       <nav className="fixed top-0 w-full border-b border-outline-variant/15 bg-[#0e0e0f]/60 backdrop-blur-xl z-50">
         <div className="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
-          <div className="text-2xl font-bold text-white tracking-tighter font-headline">Zyroth</div>
+          <Link href="/" className="text-2xl font-bold text-white tracking-tighter font-headline">AgentHub</Link>
           <div className="hidden md:flex items-center gap-8">
             <a className="text-white border-b-2 border-[#c11f68] pb-1 font-body text-sm" href="#">Infrastructure</a>
             <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Runtime</a>
@@ -12,8 +14,8 @@ export default function Home() {
             <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Pricing</a>
           </div>
           <div className="flex items-center gap-4">
-            <button className="text-on-surface-variant hover:text-white transition-colors text-sm font-medium">Sign In</button>
-            <button className="bg-linear-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Deploy Now</button>
+            <Link href="/auth/login" className="text-on-surface-variant hover:text-white transition-colors text-sm font-medium">Sign In</Link>
+            <Link href="/auth/signup" className="bg-linear-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Deploy Now</Link>
           </div>
         </div>
       </nav>
@@ -37,7 +39,7 @@ export default function Home() {
               The Kubernetes for AI Agents. Make multi-agent AI systems as easy to deploy, manage, and scale as microservices.
             </p>
             <div className="flex gap-4">
-              <button className="bg-white text-black px-8 py-4 font-bold rounded-sm hover:bg-white/90 transition-all">Start Building</button>
+              <Link href="/auth/signup" className="bg-white text-black px-8 py-4 font-bold rounded-sm hover:bg-white/90 transition-all text-center">Start Building</Link>
               <button className="border border-outline-variant/30 text-white px-8 py-4 font-bold rounded-sm hover:bg-surface-container transition-all">View Documentation</button>
             </div>
           </div>
@@ -364,7 +366,7 @@ export default function Home() {
               <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-8 leading-[0.9]">Join the <br />Infra-Revolution.</h2>
               <p className="text-on-surface-variant text-lg mb-12 max-w-lg">Scale your agentic intelligence without the orchestration overhead. Start free, scale to billions.</p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-[#c11f68] text-white px-10 py-5 font-bold rounded-sm hover:scale-[0.98] transition-transform">Get Started Now</button>
+                <Link href="/auth/signup" className="bg-[#c11f68] text-white px-10 py-5 font-bold rounded-sm hover:scale-[0.98] transition-transform text-center">Get Started Now</Link>
                 <button className="bg-surface-container-highest text-white px-10 py-5 font-bold rounded-sm border border-outline-variant/30">Talk to Engineering</button>
               </div>
             </div>
@@ -376,7 +378,7 @@ export default function Home() {
       <footer className="w-full border-t border-outline-variant/15 pt-20 pb-10 bg-[#000000]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 w-full max-w-screen-2xl mx-auto">
           <div className="col-span-2 md:col-span-1">
-            <div className="text-lg font-black text-white mb-6">Zyroth</div>
+            <div className="text-lg font-black text-white mb-6">AgentHub</div>
             <p className="text-on-surface-variant font-body text-xs leading-relaxed max-w-[200px]">
               Programmable infrastructure for the next generation of sovereign intelligence.
             </p>
