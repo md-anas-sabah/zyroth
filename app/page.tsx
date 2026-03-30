@@ -12,14 +12,14 @@ export default function Home() {
             <span className="text-2xl font-bold text-white tracking-tighter font-headline">Zyroth</span>
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <a className="text-white border-b-2 border-[#c11f68] pb-1 font-body text-sm" href="#">Infrastructure</a>
-            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Runtime</a>
+            <a className="text-white border-b-2 border-[#c11f68] pb-1 font-body text-sm" href="#">Features</a>
+            <Link href="/pricing" className="text-on-surface-variant hover:text-white transition-colors font-body text-sm">Pricing</Link>
             <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Docs</a>
-            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Pricing</a>
+            <a className="text-on-surface-variant hover:text-white transition-colors font-body text-sm" href="#">Blog</a>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/auth/login" className="text-on-surface-variant hover:text-white transition-colors text-sm font-medium">Sign In</Link>
-            <Link href="/auth/signup" className="bg-linear-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Deploy Now</Link>
+            <Link href="/auth/signup" className="bg-linear-to-br from-[#c11f68] to-[#ab23a6] text-white px-5 py-2 text-sm font-bold rounded-sm hover:scale-[0.98] transition-transform duration-300">Start Free</Link>
           </div>
         </div>
       </nav>
@@ -43,8 +43,11 @@ export default function Home() {
               The Kubernetes for AI Agents. Make multi-agent AI systems as easy to deploy, manage, and scale as microservices.
             </p>
             <div className="flex gap-4">
-              <Link href="/auth/signup" className="bg-white text-black px-8 py-4 font-bold rounded-sm hover:bg-white/90 transition-all text-center">Start Building</Link>
-              <button className="border border-outline-variant/30 text-white px-8 py-4 font-bold rounded-sm hover:bg-surface-container transition-all">View Documentation</button>
+              <Link href="/auth/signup" className="bg-white text-black px-8 py-4 font-bold rounded-sm hover:bg-white/90 transition-all text-center">Start Free Trial</Link>
+              <Link href="/pricing" className="border border-outline-variant/30 text-white px-8 py-4 font-bold rounded-sm hover:bg-surface-container transition-all">See Pricing</Link>
+            </div>
+            <div className="mt-4 text-sm text-on-surface-variant">
+              No credit card required • 1,000 free executions/month
             </div>
           </div>
           <div className="lg:col-span-5 relative">
@@ -104,6 +107,46 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Pain Points Section */}
+        <section className="max-w-screen-2xl mx-auto px-8 mb-32">
+          <div className="text-center mb-12">
+            <h2 className="text-sm uppercase tracking-widest text-on-surface-variant mb-3">The Problem With AI Agents Today</h2>
+            <p className="text-xl text-on-surface-variant max-w-2xl mx-auto">Most multi-agent systems never make it to production. Here&apos;s why.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="relative overflow-hidden border border-outline-variant/20 bg-surface-container-low p-8 hover:border-error/30 transition-all group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-error/5 rounded-full blur-3xl"></div>
+              <div className="relative">
+                <div className="text-5xl font-headline font-bold text-error mb-4">95%</div>
+                <div className="text-xl font-bold mb-3">GenAI Pilots Fail</div>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Most multi-agent systems never make it to production due to cost, complexity, and lack of orchestration tools.
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden border border-outline-variant/20 bg-surface-container-low p-8 hover:border-error/30 transition-all group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-error/5 rounded-full blur-3xl"></div>
+              <div className="relative">
+                <div className="text-5xl font-headline font-bold text-error mb-4">$240K</div>
+                <div className="text-xl font-bold mb-3">Wasted Monthly</div>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Companies spend on LLM APIs without visibility into which agents are expensive or why workflows cost 10x more.
+                </p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden border border-outline-variant/20 bg-surface-container-low p-8 hover:border-error/30 transition-all group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-error/5 rounded-full blur-3xl"></div>
+              <div className="relative">
+                <div className="text-5xl font-headline font-bold text-error mb-4">7+ Days</div>
+                <div className="text-xl font-bold mb-3">To Debug Failures</div>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  No visibility into multi-agent workflows means debugging takes forever. Logs scattered across services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Metrics Row */}
         <section className="max-w-screen-2xl mx-auto px-8 mb-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant/15 bg-surface-container-low">
@@ -147,6 +190,146 @@ export default function Home() {
                 <div className="flex-1 bg-secondary/20 h-3"></div>
                 <div className="flex-1 bg-secondary/40 h-2"></div>
                 <div className="flex-1 bg-secondary h-1"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="max-w-screen-2xl mx-auto px-8 mb-32">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-headline font-bold tracking-tighter mb-4">How It Works</h2>
+            <p className="text-on-surface-variant max-w-2xl mx-auto">Get started in minutes. Deploy enterprise-grade agent orchestration without the complexity.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative">
+              <div className="flex items-center justify-center w-16 h-16 rounded-sm bg-primary/10 border border-primary/30 mb-6">
+                <span className="text-2xl font-headline font-bold text-primary">1</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Connect Your Agents</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Register your existing agents from LangChain, CrewAI, AutoGPT, or custom frameworks. Our Universal Agent Protocol works with everything.
+              </p>
+              <div className="mt-6 p-4 bg-surface-container-low border border-outline-variant/20 font-mono text-xs">
+                <div className="text-primary">await</div> hub.register({'{'}
+                <div className="ml-4">name: &quot;email-classifier&quot;,</div>
+                <div className="ml-4">framework: &quot;langchain&quot;</div>
+                {'}'});
+              </div>
+            </div>
+            <div className="relative">
+              <div className="flex items-center justify-center w-16 h-16 rounded-sm bg-primary/10 border border-primary/30 mb-6">
+                <span className="text-2xl font-headline font-bold text-primary">2</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Build Workflows Visually</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Drag-and-drop canvas lets you orchestrate complex multi-agent workflows with conditional logic, loops, and error handling. No code required.
+              </p>
+              <div className="mt-6 flex items-center gap-2">
+                <div className="flex-1 h-12 bg-surface-container-low border border-outline-variant/20 flex items-center justify-center text-xs">Agent A</div>
+                <div className="text-primary">→</div>
+                <div className="flex-1 h-12 bg-surface-container-low border border-outline-variant/20 flex items-center justify-center text-xs">Agent B</div>
+                <div className="text-primary">→</div>
+                <div className="flex-1 h-12 bg-surface-container-low border border-outline-variant/20 flex items-center justify-center text-xs">Done</div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="flex items-center justify-center w-16 h-16 rounded-sm bg-primary/10 border border-primary/30 mb-6">
+                <span className="text-2xl font-headline font-bold text-primary">3</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Monitor & Optimize</h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Real-time dashboards show cost, performance, and errors. Our AI automatically routes tasks to the cheapest, fastest model and saves you 30-50%.
+              </p>
+              <div className="mt-6 space-y-2">
+                <div className="flex justify-between p-3 bg-surface-container-low border border-outline-variant/20 text-xs">
+                  <span>Today&apos;s Cost</span>
+                  <span className="text-primary font-bold">$124.50</span>
+                </div>
+                <div className="flex justify-between p-3 bg-surface-container-low border border-outline-variant/20 text-xs">
+                  <span>Savings</span>
+                  <span className="text-[#00ff88] font-bold">-35%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Workflow Canvas Preview */}
+        <section className="max-w-screen-2xl mx-auto px-8 mb-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6 border border-primary/30">
+                VISUAL ORCHESTRATION
+              </div>
+              <h2 className="text-4xl font-headline font-bold tracking-tighter mb-6">
+                Build Complex Workflows in Minutes, Not Weeks
+              </h2>
+              <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
+                Our drag-and-drop canvas lets you orchestrate multi-agent workflows visually.
+                Like Zapier, but built specifically for AI agents with cost optimization built-in.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-bold mb-1">Visual workflow builder with real-time preview</div>
+                    <div className="text-sm text-on-surface-variant">See your agent connections and data flow in real-time</div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-bold mb-1">Conditional logic, loops, and error handling</div>
+                    <div className="text-sm text-on-surface-variant">Build sophisticated workflows without writing code</div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-bold mb-1">One-click deploy to production</div>
+                    <div className="text-sm text-on-surface-variant">Test locally, deploy globally with zero downtime</div>
+                  </div>
+                </li>
+              </ul>
+              <Link href="/auth/signup" className="inline-block bg-primary text-white px-6 py-3 font-bold rounded-sm hover:opacity-90 transition-all">
+                Try Workflow Builder →
+              </Link>
+            </div>
+            <div className="border border-outline-variant/20 bg-surface-container-low p-6 rounded-sm">
+              <div className="aspect-video bg-surface-container-highest border border-outline-variant/20 rounded-sm flex items-center justify-center relative overflow-hidden">
+                {/* Workflow Canvas Demo Placeholder */}
+                <div className="absolute inset-0 p-8">
+                  <div className="flex flex-col gap-4 h-full">
+                    <div className="flex items-center gap-4">
+                      <div className="w-32 h-20 bg-primary/20 border-2 border-primary rounded flex items-center justify-center text-xs font-bold">
+                        Email Parser
+                      </div>
+                      <div className="flex-1 h-0.5 bg-primary"></div>
+                      <div className="w-32 h-20 bg-secondary/20 border-2 border-secondary rounded flex items-center justify-center text-xs font-bold">
+                        Classifier
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <div className="w-0.5 h-12 bg-secondary"></div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-32 h-20 bg-[#00ff88]/20 border-2 border-[#00ff88] rounded flex items-center justify-center text-xs font-bold">
+                        Ticket Creator
+                      </div>
+                      <div className="flex-1 h-0.5 bg-[#00ff88]"></div>
+                      <div className="w-32 h-20 bg-[#00eefc]/20 border-2 border-[#00eefc] rounded flex items-center justify-center text-xs font-bold">
+                        Auto Respond
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-4 px-3 py-1 bg-background/80 backdrop-blur-sm border border-outline-variant/30 text-xs font-bold">
+                  Interactive Demo Available
+                </div>
+              </div>
+              <div className="mt-4 text-xs text-on-surface-variant text-center">
+                Example: Customer support automation workflow
               </div>
             </div>
           </div>
@@ -356,6 +539,90 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Comparison Table */}
+        <section className="max-w-screen-2xl mx-auto px-8 mb-32">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-headline font-bold tracking-tighter mb-4">Why Choose Zyroth?</h2>
+            <p className="text-on-surface-variant text-lg">The only platform that makes multi-agent AI cost-effective AND enterprise-ready</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-surface-container">
+                  <th className="px-6 py-4 text-left text-sm font-bold uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/20">Feature</th>
+                  <th className="px-6 py-4 text-center text-sm font-bold uppercase tracking-widest text-primary border-b border-outline-variant/20">Zyroth</th>
+                  <th className="px-6 py-4 text-center text-sm font-bold uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/20">LangSmith</th>
+                  <th className="px-6 py-4 text-center text-sm font-bold uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/20">Superagent</th>
+                  <th className="px-6 py-4 text-center text-sm font-bold uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/20">DIY</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-outline-variant/10">
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Framework Support</td>
+                  <td className="px-6 py-4 text-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">ALL FRAMEWORKS</div>
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant text-sm">LangChain only</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant text-sm">All frameworks</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant text-sm">Custom build</td>
+                </tr>
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Cost Optimization</td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-primary mx-auto" />
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                </tr>
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Visual Workflow Builder</td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-primary mx-auto" />
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-on-surface-variant mx-auto opacity-50" />
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-on-surface-variant mx-auto opacity-50" />
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                </tr>
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Compliance (SOC2/HIPAA)</td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-primary mx-auto" />
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant text-sm">Basic</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant text-sm">DIY</td>
+                </tr>
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Managed Service</td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-primary mx-auto" />
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <CheckCircle className="w-5 h-5 text-on-surface-variant mx-auto opacity-50" />
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">—</td>
+                </tr>
+                <tr className="hover:bg-surface-container-low transition-colors">
+                  <td className="px-6 py-4 font-medium">Starting Price</td>
+                  <td className="px-6 py-4 text-center">
+                    <div className="text-primary font-bold">$0 → $99/mo</div>
+                  </td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">$39/mo</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">Free (self-host)</td>
+                  <td className="px-6 py-4 text-center text-on-surface-variant">$$$$ (dev time)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="max-w-screen-2xl mx-auto px-8 mb-32">
           <div className="relative bg-surface-container-low border border-outline-variant/20 p-16 md:p-24 overflow-hidden">
@@ -367,11 +634,21 @@ export default function Home() {
               </svg>
             </div>
             <div className="relative z-10 max-w-2xl">
-              <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-8 leading-[0.9]">Join the <br />Infra-Revolution.</h2>
-              <p className="text-on-surface-variant text-lg mb-12 max-w-lg">Scale your agentic intelligence without the orchestration overhead. Start free, scale to billions.</p>
+              <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-8 leading-[0.9]">Ready to Orchestrate Smarter?</h2>
+              <p className="text-on-surface-variant text-lg mb-12 max-w-lg">Join teams saving 30-50% on AI costs while scaling to millions of agent executions. Start free, no credit card required.</p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/auth/signup" className="bg-[#c11f68] text-white px-10 py-5 font-bold rounded-sm hover:scale-[0.98] transition-transform text-center">Get Started Now</Link>
-                <button className="bg-surface-container-highest text-white px-10 py-5 font-bold rounded-sm border border-outline-variant/30">Talk to Engineering</button>
+                <Link href="/auth/signup" className="bg-[#c11f68] text-white px-10 py-5 font-bold rounded-sm hover:scale-[0.98] transition-transform text-center">Start Free Trial</Link>
+                <Link href="/pricing" className="bg-surface-container-highest text-white px-10 py-5 font-bold rounded-sm border border-outline-variant/30 hover:bg-surface-container transition-all">View Pricing</Link>
+              </div>
+              <div className="mt-8 flex items-center gap-6 text-sm text-on-surface-variant">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>No credit card required</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  <span>1,000 free executions</span>
+                </div>
               </div>
             </div>
           </div>
@@ -393,24 +670,37 @@ export default function Home() {
           <div>
             <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Product</div>
             <div className="flex flex-col gap-4">
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Changelog</a>
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Status</a>
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Docs</a>
+              <Link href="/pricing" className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest">Pricing</Link>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Changelog</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Status</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Roadmap</a>
             </div>
           </div>
           <div>
-            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Resources</div>
+            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Developers</div>
             <div className="flex flex-col gap-4">
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">API Reference</a>
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Security</a>
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Case Studies</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Documentation</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">API Reference</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">SDK & CLI</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">GitHub</a>
             </div>
           </div>
           <div>
-            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Legal</div>
+            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Company</div>
             <div className="flex flex-col gap-4">
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Terms</a>
-              <a className="text-on-surface-variant hover:text-[#ff003d] transition-colors text-sm uppercase tracking-widest" href="#">Privacy</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">About</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Blog</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Careers</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Compare</div>
+            <div className="flex flex-col gap-4">
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs LangSmith</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs Superagent</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs DIY</a>
+              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Security</a>
             </div>
           </div>
         </div>
