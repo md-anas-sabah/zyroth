@@ -72,30 +72,52 @@ export default function Sidebar() {
             if (item.hasSubmenu) {
               return (
                 <div key={item.name} className="flex flex-col">
-                  <div 
-                    onClick={() => setIsWorkflowsOpen(!isWorkflowsOpen)}
-                    className={`flex items-center justify-between gap-3 px-4 py-3 transition-all duration-200 cursor-pointer rounded-sm ${
-                      isActive 
-                        ? 'text-[#c11f68] bg-[#c11f68]/10' 
-                        : 'text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20]'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-center">
+                    <Link 
+                      href={item.href}
+                      className={`flex-1 flex items-center gap-3 px-4 py-3 transition-all duration-200 cursor-pointer rounded-sm ${
+                        isActive 
+                          ? 'text-[#c11f68] bg-[#c11f68]/10' 
+                          : 'text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20]'
+                      }`}
+                    >
                       <Icon className={`w-4 h-4 ${isActive ? 'fill-[#c11f68]' : ''}`} />
                       <span className="font-medium text-sm tracking-wide">{item.name}</span>
-                    </div>
-                    {isWorkflowsOpen ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
+                    </Link>
+                    <button 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setIsWorkflowsOpen(!isWorkflowsOpen);
+                      }}
+                      className="p-3 text-[#9a9798] hover:text-[#e5e2e3] transition-colors"
+                    >
+                      {isWorkflowsOpen ? <ChevronDown className="w-3 h-3" /> : <ChevronRight className="w-3 h-3" />}
+                    </button>
                   </div>
                   
                   {isWorkflowsOpen && (
                     <div className="ml-4 mt-1 space-y-1 border-l border-[#584047]/15 pl-4">
                       {item.subItems?.map((subItem) => {
                         const SubIcon = subItem.icon;
+                        const subHref = subItem.href.split('#')[0]; // Convert anchor to path-only if needed, but I'll use real paths
+                        // Map the mockup anchors to real nested routes
+                        const realHref = subItem.href === '/dashboard/workflows#agents' ? '/dashboard/workflows/agents' :
+                                         subItem.href === '/dashboard/workflows#logic' ? '/dashboard/workflows/logic' :
+                                         subItem.href === '/dashboard/workflows#gates' ? '/dashboard/workflows/gates' :
+                                         subItem.href === '/dashboard/workflows#assets' ? '/dashboard/workflows/assets' :
+                                         subItem.href === '/dashboard/workflows#logs' ? '/dashboard/workflows/logs' :
+                                         subItem.href === '/dashboard/workflows#history' ? '/dashboard/workflows/history' : subItem.href;
+
                         return (
                           <Link
                             key={subItem.name}
-                            href={subItem.href}
-                            className="flex items-center gap-3 px-3 py-2 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-colors rounded-sm text-[11px] font-bold uppercase tracking-widest"
+                            href={realHref}
+                            className={`flex items-center gap-3 px-3 py-2 transition-colors rounded-sm text-[11px] font-bold uppercase tracking-widest ${
+                              pathname === realHref 
+                                ? 'text-[#c11f68] bg-[#c11f68]/5' 
+                                : 'text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20]'
+                            }`}
                           >
                             <SubIcon className="w-3.5 h-3.5" />
                             <span>{subItem.name}</span>
