@@ -28,13 +28,6 @@ export default function Home() {
         {/* Hero Section */}
         <section className="max-w-screen-2xl mx-auto px-8 mb-32 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary-dim text-xs font-bold tracking-widest uppercase mb-6 border border-outline-variant/20">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              UNIVERSAL AGENT PROTOCOL
-            </div>
             <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9] mb-8">
               Run AI Agents <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-[#c11f68] to-secondary">Smarter, Faster, Cheaper.</span>
@@ -259,9 +252,6 @@ export default function Home() {
         <section className="max-w-screen-2xl mx-auto px-8 mb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6 border border-primary/30">
-                VISUAL ORCHESTRATION
-              </div>
               <h2 className="text-4xl font-headline font-bold tracking-tighter mb-6">
                 Build Complex Workflows in Minutes, Not Weeks
               </h2>
@@ -292,7 +282,7 @@ export default function Home() {
                   </div>
                 </li>
               </ul>
-              <Link href="/auth/signup" className="inline-block bg-primary text-white px-6 py-3 font-bold rounded-sm hover:opacity-90 transition-all">
+              <Link href="/auth/signup" className="inline-block bg-[#c11f68] text-white px-6 py-3 font-bold rounded-sm hover:opacity-90 transition-all">
                 Try Workflow Builder →
               </Link>
             </div>
@@ -657,8 +647,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="w-full border-t border-outline-variant/15 pt-20 pb-10 bg-[#000000]">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 w-full max-w-screen-2xl mx-auto">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 w-full max-w-screen-2xl mx-auto">
+          <div>
             <div className="flex items-center gap-2 mb-6">
               <img src="/logo.png" alt="Zyroth Logo" className="w-6 h-6 grayscale opacity-80" />
               <div className="text-lg font-black text-white">Zyroth</div>
@@ -692,15 +682,6 @@ export default function Home() {
               <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Blog</a>
               <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Careers</a>
               <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Contact</a>
-            </div>
-          </div>
-          <div>
-            <div className="font-body text-sm uppercase tracking-widest text-white font-bold mb-6">Compare</div>
-            <div className="flex flex-col gap-4">
-              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs LangSmith</a>
-              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs Superagent</a>
-              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">vs DIY</a>
-              <a className="text-on-surface-variant hover:text-[#c11f68] transition-colors text-sm uppercase tracking-widest" href="#">Security</a>
             </div>
           </div>
         </div>
