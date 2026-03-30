@@ -1,118 +1,15 @@
-import React from 'react';
-import { 
-  Zap, 
-  LayoutDashboard, 
-  Bot, 
-  Rocket, 
-  Network, 
-  Terminal, 
-  Settings, 
-  Search, 
-  Bell, 
-  HelpCircle, 
-  Database, 
-  DollarSign, 
-  Cpu, 
+import {
+  Zap,
+  Database,
+  DollarSign,
+  Cpu,
   CheckCircle,
-  Filter,
-  MoreVertical,
-  Activity,
-  AlertCircle,
-  Clock
+  Filter
 } from 'lucide-react';
 
 export default function Dashboard() {
   return (
-    <div className="bg-[#0e0e0f] text-[#e5e2e3] font-inter min-h-screen">
-      <style>{`
-        .infrastructure-grid {
-            background-image: radial-gradient(circle at 1px 1px, rgba(193, 31, 104, 0.05) 1px, transparent 0);
-            background-size: 32px 32px;
-        }
-        .glass-card {
-            background: rgba(32, 31, 32, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(88, 64, 71, 0.15);
-        }
-      `}</style>
-      
-      {/* SideNavBar */}
-      <aside className="flex flex-col h-screen fixed left-0 top-0 z-40 w-64 border-r border-[#584047]/15 bg-[#1c1b1c]">
-        <div className="p-6">
-          <div className="flex items-center gap-3 mb-8">
-            <img src="/logo.png" alt="Zyroth Logo" className="w-8 h-8 rounded-sm" />
-            <div>
-              <h1 className="text-xl font-bold tracking-tighter text-[#e5e2e3] font-headline">Zyroth</h1>
-              <p className="font-body text-[10px] uppercase tracking-widest text-[#9a9798]">AI Orchestration</p>
-            </div>
-          </div>
-          <nav className="space-y-1">
-            <a className="flex items-center gap-3 px-4 py-3 text-[#c11f68] bg-[#c11f68]/10 border-r-2 border-[#c11f68] transition-all duration-200" href="/dashboard">
-              <LayoutDashboard className="w-4 h-4 fill-[#c11f68]" />
-              <span className="font-medium text-sm tracking-wide">Overview</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/agents">
-              <Bot className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Agents</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/workflows">
-              <Network className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Workflows</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/executions">
-              <Terminal className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Executions</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/analytics">
-              <Activity className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Analytics</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/governance">
-              <Database className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Governance</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-[#9a9798] hover:text-[#e5e2e3] hover:bg-[#201f20] transition-all duration-200" href="/dashboard/settings">
-              <Settings className="w-4 h-4" />
-              <span className="font-medium text-sm tracking-wide">Settings</span>
-            </a>
-          </nav>
-        </div>
-        <div className="mt-auto p-6">
-          <button className="w-full py-3 bg-linear-to-r from-[#c11f68] to-[#8e0048] rounded-sm text-[#ffdce4] font-headline font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
-            New Agent
-          </button>
-        </div>
-      </aside>
-
-      {/* TopAppBar */}
-      <header className="flex justify-between items-center w-full pl-72 pr-8 h-16 fixed top-0 z-30 bg-[#0e0e0f]/80 backdrop-blur-xl border-b border-[#584047]/15">
-        <div className="flex items-center w-1/3">
-          <div className="relative w-full group">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#a78990] w-4 h-4" />
-            <input className="w-full bg-[#353436]/30 border-none focus:ring-1 focus:ring-[#c11f68] text-xs font-body tracking-widest py-2 pl-10 placeholder:text-[#a78990]/50 rounded-sm text-[#e5e2e3] outline-none" placeholder="SEARCH AGENTS, LOGS, OR MODELS..." type="text" />
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-4 border-r border-[#584047]/30 pr-6">
-            <button className="text-[#a78990] hover:text-[#ffb1c7] transition-colors">
-              <Bell className="w-4 h-4" />
-            </button>
-            <button className="text-[#a78990] hover:text-[#ffb1c7] transition-colors">
-              <HelpCircle className="w-4 h-4" />
-            </button>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="text-right">
-              <p className="text-[10px] font-bold tracking-widest text-[#e5e2e3] uppercase">System Admin</p>
-              <p className="text-[9px] text-[#a78990] tracking-wider uppercase">Tier 04 Access</p>
-            </div>
-            <img alt="User Avatar" className="w-8 h-8 rounded-sm object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIjPBTG5-S-Sg35G6vjnyQV62JSuWPMg_vbK2IJAU7TlmgVTNo_5VXAXL35Hqi_IPyZEQL2cwI2RZU4GLnNShzOx9XXz30FGvEKstEYGj4NqP66kumtwz3bIATrdzMwUpXvt2zlNzE0T2fkWHnHH90LGuO43gdL5tmB8eL4Md4JLEgErFrtuy_GzVQ42P46ABAzAXNgCrcLs_jKVtRPheLVAfR4GWtlqx7ImNK-Kw-DxhWOplKtgiBBoaAy7V-4AD8iYoHk_eZrX7m" />
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="pl-72 pr-8 pt-24 pb-12 min-h-screen infrastructure-grid selection:bg-[#c11f68] selection:text-[#ffdce4]">
+    <>
         {/* Header Section */}
         <div className="mb-10 flex justify-between items-end">
           <div>
@@ -377,17 +274,6 @@ export default function Dashboard() {
             <button className="text-[10px] font-bold tracking-widest uppercase text-[#a78990] hover:text-[#ffb1c7] transition-colors">View All Runtime Logs</button>
           </div>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="flex justify-between items-center pl-72 pr-8 w-full mt-auto py-4 border-t border-[#584047]/15 bg-[#0e0e0f]">
-        <div className="flex gap-6">
-          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">System Status</a>
-          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">API Docs</a>
-          <a className="font-body text-[10px] uppercase tracking-widest text-[#9a9798] hover:text-[#e5e2e3] transition-colors" href="#">Support</a>
-        </div>
-        <p className="font-body text-[10px] uppercase tracking-widest text-[#9a9798]">v2.4.0-stable | infrastructure-chic</p>
-      </footer>
-    </div>
+    </>
   );
 }
