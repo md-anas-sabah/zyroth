@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Zap,
   Database,
@@ -6,6 +8,7 @@ import {
   CheckCircle,
   Filter
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Dashboard() {
   return (
@@ -215,8 +218,10 @@ export default function Dashboard() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#584047]/5">
-                <tr className="hover:bg-[#201f20]/30 transition-colors group">
-                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">RID-9284-AXQ</td>
+                <tr className="hover:bg-[#201f20]/50 transition-colors group cursor-pointer" onClick={() => window.location.href='/dashboard/executions/RID-9284-AXQ'}>
+                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">
+                    <Link href="/dashboard/executions/RID-9284-AXQ" className="hover:text-[#ffb1c7] transition-colors">RID-9284-AXQ</Link>
+                  </td>
                   <td className="px-8 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-5 h-5 bg-black rounded-sm flex items-center justify-center text-[10px] font-bold text-white">OA</div>
@@ -228,8 +233,10 @@ export default function Dashboard() {
                   </td>
                   <td className="px-8 py-4 text-right font-mono text-xs text-[#e5e2e3]">142ms</td>
                 </tr>
-                <tr className="hover:bg-[#201f20]/30 transition-colors group">
-                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">RID-9283-ZLM</td>
+                <tr className="hover:bg-[#201f20]/50 transition-colors group cursor-pointer" onClick={() => window.location.href='/dashboard/executions/RID-9283-ZLM'}>
+                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">
+                    <Link href="/dashboard/executions/RID-9283-ZLM" className="hover:text-[#ffb1c7] transition-colors">RID-9283-ZLM</Link>
+                  </td>
                   <td className="px-8 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-5 h-5 bg-[#7044e3] rounded-sm flex items-center justify-center text-[10px] font-bold text-white">AN</div>
@@ -241,8 +248,10 @@ export default function Dashboard() {
                   </td>
                   <td className="px-8 py-4 text-right font-mono text-xs text-[#e5e2e3]">289ms</td>
                 </tr>
-                <tr className="hover:bg-[#201f20]/30 transition-colors group">
-                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">RID-9282-YPT</td>
+                <tr className="hover:bg-[#201f20]/50 transition-colors group cursor-pointer" onClick={() => window.location.href='/dashboard/executions/RID-9282-YPT'}>
+                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">
+                    <Link href="/dashboard/executions/RID-9282-YPT" className="hover:text-[#ffb1c7] transition-colors">RID-9282-YPT</Link>
+                  </td>
                   <td className="px-8 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-5 h-5 bg-[#4285F4] rounded-sm flex items-center justify-center text-[10px] font-bold text-white">GE</div>
@@ -254,8 +263,10 @@ export default function Dashboard() {
                   </td>
                   <td className="px-8 py-4 text-right font-mono text-xs text-[#e5e2e3]">114ms</td>
                 </tr>
-                <tr className="hover:bg-[#201f20]/30 transition-colors group">
-                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">RID-9281-WVB</td>
+                <tr className="hover:bg-[#201f20]/50 transition-colors group cursor-pointer" onClick={() => window.location.href='/dashboard/executions/RID-9281-WVB'}>
+                  <td className="px-8 py-4 font-mono text-xs text-[#dfbec6] tracking-wider">
+                    <Link href="/dashboard/executions/RID-9281-WVB" className="hover:text-[#ffb1c7] transition-colors">RID-9281-WVB</Link>
+                  </td>
                   <td className="px-8 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-5 h-5 bg-black rounded-sm flex items-center justify-center text-[10px] font-bold text-white">OA</div>
